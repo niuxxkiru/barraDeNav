@@ -10,18 +10,16 @@
 
 body {
     background-image: url(img/alonso-reyes-haZNHEV2WXQ-unsplash.jpg);
-    
-    background-size: 100%;
     background-repeat: no-repeat;
-    background-position: 50% 20%;
+    background-position: center center;
+    height: 1800px;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 #search-bar {
     display: flex;
     align-items: center;
-    border: solid 1px #ccc;
-    border-radius: 1em;
-    padding: 1em;
     position: absolute;
     top: 50%;
     right: 50%;
@@ -30,18 +28,23 @@ body {
 
 
 
-#search-bar:focus-within {
+#search-bar  input:focus-within {
     border: solid 1px #aaa;
     box-shadow: 0px 2px 7px rgb(189, 189, 189);
+
 }
 
 #search-bar input {
     /* quitamos el borde interno del input que aparece al hacer click */
+    width: 20em;
     outline: none;
     border: none;
-    padding: .8em;
-    font-size: 1.1em;
-
+    border-radius: 2em;
+    padding: .7em;
+    margin: 1em;
+    font-size: 1em;
+    flex: auto;
+    
 }
 
 #search-bar label {
@@ -55,14 +58,16 @@ body {
 }
 
 #search-bar .actions button {
+    background-color: transparent;
     border: none;
     outline: none;
-    background-color: #ffff;
     cursor: pointer;
-    color: #999;
-    font-size: 1.1em;
+    color: #ffffff;
+    font-size: 1.3em;
 }
 
 #search-bar .actions button:hover {
-    color: #181f86;
+    font-size: 1.8em;
+    transition: .2s;
+    transform: translate(0,-3px);
 }
